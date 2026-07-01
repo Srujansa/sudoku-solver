@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+
+    <!-- Linking our external CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Main container for the whole app -->
+    <div class="app-container">
+
+        <!-- Heading section -->
+        <header class="header">
+            <h1>Sudoku Solver</h1>
+            <p class="subtitle">Play, Generate, Solve and Get Hints!</p>
+        </header>
+
+        <!-- Top info bar: shows timer and difficulty selector -->
+        <div class="info-bar">
+
+            <div class="info-box">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <div class="info-box">
+                <span>Timer:</span>
+                <span id="timer">00:00</span>
+            </div>
+
+            <div class="info-box">
+                <span>Mistakes:</span>
+                <span id="mistakes">0</span>
+            </div>
+
+        </div>
+
+        <!-- The actual 9x9 sudoku grid will be created dynamically using JavaScript -->
+        <!-- We just give it an empty container here -->
+        <div id="sudoku-board" class="sudoku-board"></div>
+
+        <!-- Message box to show status like "Solved!" or "Wrong Entry" -->
+        <p id="message" class="message"></p>
+
+        <!-- Buttons for all the actions -->
+        <div class="controls">
+            <button id="newGameBtn" class="btn">New Game</button>
+            <button id="solveBtn" class="btn">Solve</button>
+            <button id="hintBtn" class="btn">Hint</button>
+            <button id="resetBtn" class="btn">Reset</button>
+            <button id="checkBtn" class="btn">Check</button>
+        </div>
+
+        <!-- Small footer note explaining how to use keyboard -->
+        <footer class="footer">
+            <p>Tip: Use Arrow Keys to move between cells. Use Delete/Backspace to clear a cell.</p>
+        </footer>
+
+    </div>
+
+    <!-- Linking our JavaScript file at the end so HTML loads first -->
+    <script src="js/script.js"></script>
+</body>
+</html>
